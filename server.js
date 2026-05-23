@@ -3,6 +3,9 @@ const express = require('express');
 const cors = require('cors');
 const session = require('express-session');
 const authRoutes = require('./routes/authRoutes');
+const carRoutes = require('./routes/carRoutes');
+const slotRoutes = require('./routes/slotRoutes');
+const recordRoutes = require('./routes/recordRoutes');
 
 const app = express();
 const PORT = 5000;
@@ -27,6 +30,10 @@ app.use(session({
 
 // Mount Authentication Endpoints
 app.use('/api/auth', authRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/cars', carRoutes);
+app.use('/api/slots', slotRoutes);
+app.use('/api/records', recordRoutes);
 
 // Base Route
 app.get('/', (req, res) => {
