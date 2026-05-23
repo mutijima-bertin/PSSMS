@@ -13,7 +13,7 @@ const PORT = 5000;
 // Global Middleware
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:3000', // Matches React app port
+    origin: 'http://localhost:5173', // Matches React app port
     credentials: true
 }));
 
